@@ -28,7 +28,7 @@ class UserController extends Controller
             $validatedData = $request->validate([
                 'first_name' => 'required|string|min:2',
                 'last_name' => 'required|string|min:2',
-                'email' => 'required|email',
+                'email' => 'required|email|unique:users,email',
                 'birth_date' => 'nullable|date',
                 'password' => 'required|string|min:6'
             ]);
