@@ -30,7 +30,7 @@
                             <td>{{$user->userAge()}}</td>
                             <td>
                                 <a href="{{ route('user.edit', $user->id)}}" class="btn btn-primary">Edit</a>
-                                <button type="button" class="btn btn-danger">Delete</button>
+                                <a href="{{ route('user.delete', $user->id)}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach

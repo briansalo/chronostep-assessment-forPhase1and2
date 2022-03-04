@@ -34,3 +34,5 @@ require __DIR__.'/auth.php';
 
     Route::get('/user_edit/{userId}', [UserController::class, 'UserEdit'])->name('user.edit');
     Route::post('/user_update/{userId}', [UserController::class, 'UserUpdate'])->name('user.update');
+
+    Route::get('/user_delete/{userId}', [UserController::class, 'UserDelete'])->name('user.delete');
