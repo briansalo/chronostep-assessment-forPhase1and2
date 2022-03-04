@@ -28,3 +28,6 @@ require __DIR__.'/auth.php';
 
 
     Route::get('/user_list', [UserController::class, 'UserList'])->name('user.list');
+
+    Route::get('/user_add', [UserController::class, 'UserAdd'])->name('user.add');
+    Route::post('/user_save', [UserController::class, 'UserSave'])->name('user.save');

@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-header">
                 User List
-                <button type="button" class="btn btn-success" style="float:right">Add User</button>
+                <a href="{{route('user.add')}}" class="btn btn-success" style="float:right">Add User</a>
             </div>
             <div class="card-body">
                 <table class="table table-striped">
