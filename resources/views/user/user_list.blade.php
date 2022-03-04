@@ -35,7 +35,10 @@
                         </tr>
                         @endforeach
                     </tbody>
-                </table>        
+                </table>
+                <div class="d-flex">
+                    {!! $alluser->links() !!}
+                </div>        
             </div><!--card-body-->
         </div><!--card-->
     </div><!--container-->
