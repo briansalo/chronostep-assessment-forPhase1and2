@@ -27,6 +27,9 @@
        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
+       <!--for sweetalert-->
+       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -56,6 +59,31 @@
             @endif
         });
 
+
+            $(function(){
+                $(document).on('click','#delete', function(e){
+                    e.preventDefault();
+                    var link = $(this).attr("href");
+                        Swal.fire({
+                          title: 'Are you sure?',
+                          text: "Delete this data?",
+                          icon: 'warning',
+                          showCancelButton: true,
+                          confirmButtonColor: '#d33',
+                          cancelButtonColor: '#3085d6',
+                          confirmButtonText: 'Yes, delete it!'
+                        }).then((result) => {
+                          if (result.isConfirmed) {
+                            window.location.href = link
+                            Swal.fire(
+                              'Deleted!',
+                              'Your file has been deleted.',
+                              'success'
+                            )
+                          }
+                        })
+                    })
+            });
     </script>
 
     </body>
