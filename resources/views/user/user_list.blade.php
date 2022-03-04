@@ -29,7 +29,7 @@
                             <td>{{$user->email}}</td>
                             <td>{{$user->userAge()}}</td>
                             <td>
-                                <button type="button" class="btn btn-primary">Edit</button>
+                                <a href="{{ route('user.edit', $user->id)}}" class="btn btn-primary">Edit</a>
                                 <button type="button" class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
